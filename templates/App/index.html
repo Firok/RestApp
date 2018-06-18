@@ -1,0 +1,13 @@
+{% if all_restaurants %}
+<ul>
+    {% for restaurant in all_restaurants %}
+        <li>
+            <a href="/App/{{ restaurant.id }}/">{{ restaurant.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% else %}
+    <h3>
+        No restaurants
+    </h3>
+{% endif %}
