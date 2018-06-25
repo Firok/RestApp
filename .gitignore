@@ -3,3 +3,15 @@
 
 # Ignore .__pycache__
 __pycache__
+
+# Ignore pytest_cache
+.pytest_cache
+
+# Ignore htmlcov
+htmlcov
+
+.coverage
+
+App/migrations
+
+db.sqlite3
