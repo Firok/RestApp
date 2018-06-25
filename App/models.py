@@ -16,7 +16,7 @@ class Address(models.Model):
 class Restaurant(models.Model):
     name = models.CharField(max_length=250)
     phone = models.CharField(max_length=50)
-    address = models.ForeignKey(Address, on_delete=models.CASCADE)
+    address = models.ManyToManyField(Address)
 
     def __str__(self):
         return self.name
