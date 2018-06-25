@@ -2,7 +2,7 @@
 <ul>
     {% for restaurant in all_restaurants %}
         <li>
-            <a href="/App/{{ restaurant.id }}/">{{ restaurant.name }}</a>
+            <a href="/App/detail/{{ restaurant.id }}/">{{ restaurant.name }}</a>
         </li>
     {% endfor %}
 </ul>

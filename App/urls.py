@@ -9,8 +9,8 @@ router.register('restaurants', views.RestaurantView)
 
 urlpatterns = [
     path('', include(router.urls)),
-    url(r'^$', views.index, name='index'),
+    url(r'index', views.index, name='index'),
     # App/134/
-    url(r'^(?P<restaurant_id>\d+)/$', views.detail, name='detail'),
+    url(r'detail/(?P<restaurant_id>\d+)/', views.detail, name='detail'),
 
 ]
