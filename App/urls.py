@@ -1,9 +1,14 @@
 from django.conf.urls import url
+from django.urls import path, include
 from . import views
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register('addresses', views.AddressView)
+router.register('restaurants', views.RestaurantView)
 
 urlpatterns = [
-    url(r'^restaurants/$', views.restaurant_api),
-    url(r'^address/$', views.address_api),
+    path('', include(router.urls)),
     url(r'^$', views.index, name='index'),
     # App/134/
     url(r'^(?P<restaurant_id>\d+)/$', views.detail, name='detail'),
